@@ -1,7 +1,33 @@
-import { Inter } from "next/font/google";
+import {
+  Inter,
+  Delius_Swash_Caps,
+  Kolker_Brush,
+  Kumbh_Sans,
+  Klee_One,
+} from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], variable: "--inter" });
+const delius = Delius_Swash_Caps({
+  subsets: ["latin"],
+  variable: "--delius",
+  weight: "400",
+});
+const kolker = Kolker_Brush({
+  subsets: ["latin"],
+  variable: "--kolker",
+  weight: "400",
+});
+const klee = Klee_One({
+  subsets: ["latin"],
+  variable: "--klee",
+  weight: ["400", "600"],
+});
+const kumbh = Kumbh_Sans({
+  subsets: ["latin"],
+  variable: "--kumbh",
+  weight: ["100", "200", "300", "400", "500"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +36,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      lang="en"
+      className={`${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
+    >
+      <body>{children}</body>
     </html>
   );
 }
