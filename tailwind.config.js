@@ -19,6 +19,8 @@ module.exports = {
       kolker: ["var(--kolker)"],
       kumbh: ["var(--kumbh)"],
       klee: ["var(--klee)"],
+      dmSerif: ["var(--dmSerif)"],
+      khula: ["var(--khula)"],
     },
   },
   plugins: [],
