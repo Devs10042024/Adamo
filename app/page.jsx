@@ -4,6 +4,8 @@ import iconesHero from "./assets/iconesHero.svg";
 import avancar from "./assets/avancar.svg";
 import ownSistema from "./assets/ownSistema.svg";
 import target from "./assets/target.svg";
+import Dashboard from "./dashboards/dashboard";
+
 
 export default function Home() {
   return (
@@ -86,7 +88,7 @@ export default function Home() {
         <h1 className="font-dmSerif text-5xl text-center w-[800px]">
           Tenha mais controle do que acontece na sua empresa
         </h1>
-        <div className="flex w-4/5 h-screen rounded-2xl shadow1 shadow-cyan-300"></div>
+        <Dashboard></Dashboard>
       </section>
       <section className="flex flex-col items-center mb-20">
         <div className="grid grid-cols-2 place-items-center text-center px-28 gap-20 mb-20">
