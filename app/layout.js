@@ -6,6 +6,7 @@ import {
   Klee_One,
   DM_Serif_Text,
   Khula,
+  Paytone_One,
 } from "next/font/google";
 import "./globals.css";
 
@@ -23,6 +24,11 @@ const kolker = Kolker_Brush({
 const dmSerif = DM_Serif_Text({
   subsets: ["latin"],
   variable: "--dmSerif",
+  weight: "400",
+});
+const paytone = Paytone_One({
+  subsets: ["latin"],
+  variable: "--paytone",
   weight: "400",
 });
 const klee = Klee_One({
@@ -50,7 +56,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${dmSerif.variable} ${khula.variable} ${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
+      className={`${dmSerif.variable} ${paytone.variable} ${khula.variable} ${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
     >
       <body className="">{children}</body>
     </html>

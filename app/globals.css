@@ -8,7 +8,8 @@
 
 @layer components {
   .caixasMensagem {
-    @apply h-10  w-80 bg-slate-100 border-2 border-solid border-cyan-600 rounded-2xl flex items-end pb-1 pl-4;
+    @apply h-10  w-80 bg-slate-100 text-black 
+    border-2 border-solid border-cyan-600 rounded-2xl flex items-end pb-1 pl-4;
   }
 }
 
@@ -22,6 +23,28 @@
 
   .bgBrancoAzul {
     background: linear-gradient(180deg, #fff 0%, #b3efff 99.96%);
+  }
+
+  .bgAzulAmarelo {
+    background: linear-gradient(191deg, #b3efff 51.96%, #f0e4cc 82.86%);
+    mix-blend-mode: multiply;
+  }
+
+  .bgNoite {
+    background: linear-gradient(
+      351deg,
+      #2b2e3d 63.48%,
+      #3c3d44 79.59%,
+      #4c4c4c 87.7%
+    );
+  }
+
+  .textShadow {
+    text-shadow: 0px 4px 12px #91b6fd;
+  }
+
+  .shadowYellow {
+    filter: drop-shadow(0px 0px 20px rgba(255, 255, 255, 0.25));
   }
 }
 

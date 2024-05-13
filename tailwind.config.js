@@ -21,6 +21,7 @@ module.exports = {
       klee: ["var(--klee)"],
       dmSerif: ["var(--dmSerif)"],
       khula: ["var(--khula)"],
+      paytone: ["var(--paytone)"],
     },
   },
   plugins: [],
