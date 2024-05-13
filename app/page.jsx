@@ -6,7 +6,6 @@ import ownSistema from "./assets/ownSistema.svg";
 import target from "./assets/target.svg";
 import Dashboard from "./dashboards/dashboard";
 
-
 export default function Home() {
   return (
     <main>
@@ -93,17 +92,15 @@ export default function Home() {
       <section className="flex flex-col items-center mb-20">
         <div className="grid grid-cols-2 place-items-center text-center px-28 gap-20 mb-20">
           <h1 className="font-dmSerif text-4xl leading-relaxed">
-            Somos Versáteis! Nosso objetivo é nos adaptarmos às sua necessidades
+            Precisa de algo específico? Somos especializados nisso!
           </h1>
-          <h2 className="font-khula font-medium text-xl w-[95%] leading-relaxed">
-            Nos da Adamo entendemos que atualmente existem diversas formas de se
-            operar uma empresa, por isso estamos preparados para nos atentarmos
-            especificamente a VOCE!
+          <h2 className="font-kumbh text-xl w-[95%] leading-relaxed text-slate-400">
+            Somos Versáteis! Nosso objetivo é nos adaptarmos às sua necessidades
           </h2>
         </div>
         <div className="grid grid-cols-2 w-full">
-          <div className="flex flex-col gap-24 items-center pl-14 pt-20">
-            <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col gap-24 pl-14 pt-20">
+            <div className="flex flex-col pl-20 gap-6">
               <div className="flex items-center gap-4">
                 <h1 className="font-dmSerif text-3xl">Solucoes Certeiras</h1>
                 <Image
@@ -113,13 +110,17 @@ export default function Home() {
                   alt="S"
                 />
               </div>
-              <h2 className="text-center text-lg w-3/4">
-                - Sabe aquela tarefas que lhe da dor de cabeca? Aquele assunto
-                que demora dias pra ser resolvido? Vamos conversar para chegar a
-                umas solucao juntos!
-              </h2>
+              <div className="flex flex-col gap-5 font-kumbh">
+                <h2 className="text-lg text-slate-500">
+                  Sabe aquela tarefas que lhe da dor de cabeca?
+                  <br /> Aquele assunto que demora dias pra ser resolvido?
+                </h2>
+                <h2 className="text-lg font-medium text-cyan-400">
+                  Vamos conversar para chegar a umas solucao juntos!
+                </h2>
+              </div>
             </div>
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col pl-20 gap-6">
               <div className="flex items-center gap-4">
                 <h1 className="font-dmSerif text-3xl">
                   Tenha o SEU proprio sistema
@@ -131,18 +132,35 @@ export default function Home() {
                   alt="S"
                 />
               </div>
-              <h2 className="text-center text-lg w-3/4">
-                - Nao quer pagar uma mensalidade ou nenhum dos pacotes parece
-                certo para voce? Criaremos um sistema SEU. Apos seu
-                funcionamente aprovado nao tera ligacao com nos, sem pagamento
-                extra, sem mensalidades.
-              </h2>
+              <div className="flex flex-col gap-5 font-kumbh">
+                <h2 className="text-lg text-slate-500">
+                  Nao quer pagar uma mensalidade?
+                  <br />
+                  Nenhum dos pacotes parece certo para voce?
+                </h2>
+                <h2 className="text-lg w-5/6 font-medium text-cyan-400">
+                  Criaremos um sistema SEU e após VOCE aprova-lo, não haverá
+                  nenhum pagamento extra ou mensalidades.
+                </h2>
+              </div>
             </div>
-            <div className="w-52 h-12 bg-cyan-200 grid place-items-center rounded-xl mb-10">
-              <p>Vamos Conversar!</p>
+            <div className="w-full grid place-items-center">
+              <p className="w-52 h-12 bg-cyan-200 grid place-items-center rounded-xl mb-10">
+                Vamos Conversar!
+              </p>
             </div>
           </div>
           <div className="h-full w-full shadow2 bg-slate-100 rounded-l-3xl"></div>
+        </div>
+      </section>
+      <section className="flex items-center justify-center gap-10 pt-20 bgBrancoAzul">
+        <div>
+          <h1>Automacoes</h1>
+          
+        </div>
+        <div className="w-1 h-full bg-black"></div>
+        <div>
+          <h1>Integracoes</h1>
         </div>
       </section>
     </main>

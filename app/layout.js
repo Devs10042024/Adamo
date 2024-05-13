@@ -52,7 +52,7 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${dmSerif.variable} ${khula.variable} ${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
     >
-      <body>{children}</body>
+      <body className="">{children}</body>
     </html>
   );
 }
