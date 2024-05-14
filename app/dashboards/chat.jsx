@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./app.css";
+import "../globals.css";
 import PainelChat from "../assets/PainelChat.svg";
 import Image from "next/image";
 

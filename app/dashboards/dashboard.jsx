@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./app.css";
+import "../globals.css";
 import Clientes from "./clientes";
 import Estoque from "./estoque";
 import Projetos from "./tarefas";

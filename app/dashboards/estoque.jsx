@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./app.css";
+import "../globals.css";
 import PainelEstoque from "../assets/PainelEstoque.svg";
 import Image from "next/image";
 
