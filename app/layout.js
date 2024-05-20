@@ -7,6 +7,8 @@ import {
   DM_Serif_Text,
   Khula,
   Paytone_One,
+  Gilda_Display,
+  Livvic,
 } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +21,11 @@ const delius = Delius_Swash_Caps({
 const kolker = Kolker_Brush({
   subsets: ["latin"],
   variable: "--kolker",
+  weight: "400",
+});
+const gilda = Gilda_Display({
+  subsets: ["latin"],
+  variable: "--gilda",
   weight: "400",
 });
 const dmSerif = DM_Serif_Text({
@@ -46,6 +53,11 @@ const khula = Khula({
   variable: "--khula",
   weight: ["300", "400", "600", "700", "800"],
 });
+const livic = Livvic({
+  subsets: ["latin"],
+  variable: "--livic",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "900"],
+});
 
 export const metadata = {
   title: "Create Next App",
@@ -56,7 +68,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${dmSerif.variable} ${paytone.variable} ${khula.variable} ${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
+      className={`${dmSerif.variable} ${livic.variable} ${gilda.variable} ${paytone.variable} ${khula.variable} ${inter.variable} ${delius.variable} ${kolker.variable} ${kumbh.variable} ${klee.variable}`}
     >
       <body className="">{children}</body>
     </html>

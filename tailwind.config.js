@@ -22,6 +22,8 @@ module.exports = {
       dmSerif: ["var(--dmSerif)"],
       khula: ["var(--khula)"],
       paytone: ["var(--paytone)"],
+      gilda: ["var(--gilda)"],
+      livic: ["var(--livic)"],
     },
   },
   plugins: [],

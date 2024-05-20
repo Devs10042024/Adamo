@@ -11,6 +11,10 @@
     @apply h-10  w-80 bg-slate-100 text-black 
     border-2 border-solid border-cyan-600 rounded-2xl flex items-end pb-1 pl-4;
   }
+
+  .clicked {
+    @apply border-blue-600 border-solid transition;
+  }
 }
 
 @layer utilities {
@@ -69,6 +73,8 @@
     background: rgba(255, 255, 255, 0.075);
     border-radius: 4px;
   }
+  /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
+
 }
 
 body {

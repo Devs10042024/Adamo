@@ -17,21 +17,33 @@ import avancar from "./assets/avancar.svg";
 import ownSistema from "./assets/ownSistema.svg";
 import target from "./assets/target.svg";
 import Dashboard from "./dashboards/dashboard";
+import Chat from "./assets/Chat.svg";
+import Progresso from "./assets/Progresso.svg";
+import Gerenciamento from "./assets/Gerenciamento.svg";
+import Metas from "./assets/Metas.svg";
+import Clientes from "./assets/Clientes.svg";
 
 import { useState } from "react";
+import axios from "axios";
+import CardContato from "./cardContato/cardContato";
 
 export default function Home() {
+  const [openModal, setOpenModal] = useState(false);
+
   const [emailData, setEmailData] = useState({
     name: "",
     phone: "",
-    message: "",
     email: "",
+    message: "",
   });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("", emailData);
+      await axios.post(
+        "https://us-central1-a1b2c3kkk98.cloudfunctions.net/emailHandler/sendEmail",
+        emailData
+      );
       alert("E-mail enviado com sucesso!");
     } catch (error) {
       console.error("Erro ao enviar e-mail:", error);
@@ -49,128 +61,85 @@ export default function Home() {
 
   return (
     <main>
-      <div id="gradiente-hero">
-        <header className="grid grid-cols-9 items-start px-28 py-6 font-klee">
-          <div className="col-span-3 grid place-items-start grid-cols-3">
+      <div className="bg-slate-100">
+        <header className="grid grid-cols-9 items-start px-24 py-3 font-livic relative bg-sky-400">
+          <div className="col-span-3 flex items-center justify-start gap-8 h-full w-full">
+            <h1 className="text-4xl font-gilda font-bold col-span-1">Adamo</h1>
+            <CardContato nome="Contate-nos"></CardContato>
+          </div>
+          <div className="col-span-3 flex items-center justify-around h-full w-full">
             <p className="hover:scale-110 transition transition-300 cursor-pointer">
               Solucoes
-            </p>
-            <p className="hover:scale-110 transition transition-300 cursor-pointer">
-              Precos
             </p>
             <p className="whitespace-nowrap hover:scale-110 transition transition-300 cursor-pointer">
               Servicos personalizados
             </p>
+            <p className="hover:scale-110 transition transition-300 cursor-pointer">
+              Casos de Uso
+            </p>
           </div>
-          <div className="col-span-3 grid place-items-center">
-            <h1 className="text-8xl font-kolker">Adamo</h1>
-          </div>
-          <div className="col-span-3 grid grid-cols-2  place-items-end">
-            <div className="hover:scale-110 transition transition-300 cursor-pointer border-[1px] border-solid border-slate-700 p-2 rounded-lg">
-              <p>Contate-nos</p>
-            </div>
-            <div>
-              <div className="hover:scale-110 transition transition-300 cursor-pointer border-[1px] border-solid border-cyan-800 shadow-lg shadow-cyan-400 p-2 rounded-lg flex items-center gap-4">
-                <p>Iniciar Sessao</p>
-                <Image
-                  src={seta} // Use o caminho correto para o seu arquivo SVG
-                  height={20}
-                  width={20}
-                  alt="S"
-                />
-              </div>
+          <div className="col-span-3 grid place-items-end">
+            <div
+              className="hover:scale-110 transition transition-300 cursor-pointer 
+             shadow-lg p-2 rounded-lg flex items-center justify-center gap-2
+             bg-white w-48"
+            >
+              <p className="text-center">Comecar</p>
+              <Image
+                src={seta} // Use o caminho correto para o seu arquivo SVG
+                height={20}
+                width={20}
+                alt="S"
+              />
             </div>
           </div>
         </header>
-        <section className="flex flex-col items-center justify-start font-klee font-semibold">
-          <div className="flex flex-col items-center justify-start gap-10 pt-10 mb-48 relative">
-            <h1 className="text-7xl text-center font-delius font-normal">
-              A empresa numero 1 em solucoes empresariais.
+        <section className="flex flex-col items-center justify-start font-semibold">
+          <div className="flex flex-col items-center justify-start gap-10 pt-20 w-full">
+            <h1 className="text-7xl text-center font-gilda w-3/4">
+              A empresa número 1 em soluções empresariais
             </h1>
-            <h2 className="text-3xl font-kumbh font-light">
+            <h2 className="text-3xl font-livic font-light">
               Do que sua empresa precisa?
             </h2>
+          </div>
+          <div className="flex w-full px-20 justify-around">
             <Image
-              className={"absolute top-[120%] px-28 xl:px-0 z-10"}
-              src={iconesHero} // Use o caminho correto para o seu arquivo SVG
-              height={"full"}
-              width={"full"}
+              className="pt-48"
+              src={Clientes} // Use o caminho correto para o seu arquivo SVG
+              height={"100%"}
+              width={"100%"}
               alt="S"
-            />
+            ></Image>
+            <Image
+              className="pt-20"
+              src={Chat} // Use o caminho correto para o seu arquivo SVG
+              height={"100%"}
+              width={"100%"}
+              alt="S"
+            ></Image>
+            <Image
+              src={Progresso} // Use o caminho correto para o seu arquivo SVG
+              height={"100%"}
+              width={"100%"}
+              alt="S"
+            ></Image>
+            <Image
+              className="pt-20"
+              src={Metas} // Use o caminho correto para o seu arquivo SVG
+              height={"100%"}
+              width={"100%"}
+              alt="S"
+            ></Image>
+            <Image
+              className="pt-48"
+              src={Gerenciamento} // Use o caminho correto para o seu arquivo SVG
+              height={"100%"}
+              width={"100%"}
+              alt="S"
+            ></Image>
           </div>
-          <div
-            className="z-20 w-72 h-12 bg-cyan-200 rounded-3xl border-slate-900 border-solid 
-          border-[1.5px] shadow-md shadow-slate-900 mb-10
-          hover:scale-110 transition transition-300 cursor-pointer"
-          >
-            <p className="text-center text-2xl font-klee leading-relaxed">
-              Quero comecar
-            </p>
-          </div>
-          <h2 className="text-3xl text-center w-3/5">
-            Nao sabe exatamente por onde comecar? Nosso time entrara em contato
-            com voce:
-          </h2>
-          <form
-            onSubmit={handleSubmit}
-            className="flex flex-col gap-10 items-center text-white w-1/2"
-          >
-            <div className="grid grid-cols-2 place-items-center gap-10 pt-20 opacity-50">
-              <div className="">
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={emailData.name}
-                  onChange={handleChange}
-                  className="caixasMensagem"
-                  placeholder="Qual seu Nome?"
-                />
-              </div>
-              <div className="">
-                <input
-                  type="tel"
-                  id="number"
-                  name="phone"
-                  value={emailData.phone}
-                  onChange={handleChange}
-                  className="caixasMensagem"
-                  placeholder="Qual seu telefone?"
-                />
-              </div>
-              <div className="col-span-2">
-                <input
-                  type="text"
-                  id="email"
-                  name="email"
-                  value={emailData.email}
-                  onChange={handleChange}
-                  className="caixasMensagem"
-                  placeholder="Qual seu Email?"
-                />
-              </div>
-            </div>
-            <div className="flex w-full text-black">
-              <textarea
-                id="message"
-                type="text"
-                name="message"
-                value={emailData.message}
-                onChange={handleChange}
-                className="flex w-full h-72 bg-slate-100 border-2 border-solid border-cyan-600 rounded-2xl
-                 items-start pt-4 opacity-50 pl-4"
-                rows="6"
-                placeholder="O que gostaria de saber?"
-              />
-            </div>
-            <div
-              className="flex items-center justify-center rounded-2xl bg-blue-500 w-1/2 h-12 text-white mb-20
-            hover:bg-blue-600 hover:scale-105 transition duration-200 gap-6 cursor-pointer"
-            >
-              <button type="submit">Entrem em contato comigo</button>
-              <Image src={avancar} height={30} width={30} alt="Avancar" />
-            </div>
-          </form>
+          <CardContato nome="Quero Comecar"></CardContato>
         </section>
       </div>
       <section className="flex flex-col items-center pt-20 mb-52 gap-20">
@@ -179,7 +148,7 @@ export default function Home() {
         </h1>
         <Dashboard></Dashboard>
       </section>
-      <section className="flex flex-col items-center mb-20">
+      <section className="relative flex flex-col items-center mb-20">
         <div className="grid grid-cols-2 place-items-center text-center px-28 gap-20 mb-20">
           <h1 className="font-dmSerif text-4xl leading-relaxed">
             Precisa de algo específico? Somos especializados nisso!
@@ -234,23 +203,19 @@ export default function Home() {
                 </h2>
               </div>
             </div>
-            <div className="w-full grid place-items-center hover:scale-110 transition transition-300 cursor-pointer">
-              <p className="w-52 h-12 bg-cyan-200 grid place-items-center rounded-xl mb-10">
-                Vamos Conversar!
-              </p>
-            </div>
+            <CardContato nome="Vamos Conversar!" noite="nao"></CardContato>
           </div>
           <div className="h-full w-full shadow2 bg-slate-100 rounded-l-3xl"></div>
         </div>
       </section>
-      <section className="flex items-center justify-center gap-10 pt-80 bgBrancoAzul">
-        <div className="w-1/3 h-[950px] bg-white flex flex-col items-center pt-48 gap-20 relative rounded-2xl">
+      <section className="relative flex items-center justify-center gap-10 pt-80 bgBrancoAzul">
+        <div className="w-1/3 h-[950px] bg-white flex flex-col items-center gap-10 rounded-2xl">
           <Image
             src={OndasTopEsquerda} // Use o caminho correto para o seu arquivo SVG
             height={"full"}
             width={"full"}
             alt="S"
-            className="absolute top-0 "
+            className=""
           />
           <h1 className="font-paytone text-4xl text-blue-500 pt-10">
             Automacoes
@@ -267,11 +232,8 @@ export default function Home() {
           <h2 className="font-paytone text-lg text-slate-900">
             Foque nos trabalhos mais importantes!
           </h2>
-          <div className="w-72 h-16 bg-blue-500 grid place-items-center rounded-2xl hover:scale-110 transition transition-300 cursor-pointer">
-            <p className="font-paytone text-xl text-white">
-              Quero uma automacao!
-            </p>
-          </div>
+
+          <CardContato nome="Quero uma automacao!" noite="nao"></CardContato>
         </div>
         <Image
           src={setaCruzada} // Use o caminho correto para o seu arquivo SVG
@@ -279,13 +241,13 @@ export default function Home() {
           width={"full"}
           alt="S"
         />
-        <div className="w-1/3 h-[950px] bg-white flex flex-col items-center pt-48 gap-20 relative rounded-2xl">
+        <div className="w-1/3 h-[950px] bg-white flex flex-col items-center gap-10  rounded-2xl">
           <Image
             src={OndasTopDireita} // Use o caminho correto para o seu arquivo SVG
             height={"full"}
             width={"full"}
             alt="S"
-            className="absolute top-0"
+            className=""
           />
           <h1 className="font-paytone text-4xl text-blue-500 pt-10">
             Integracoes
@@ -302,11 +264,10 @@ export default function Home() {
           <h2 className="font-paytone text-lg text-slate-900">
             Realize mais usando mais
           </h2>
-          <div className="w-72 h-16 bg-blue-500 grid place-items-center rounded-2xl hover:scale-110 transition transition-300 cursor-pointer">
-            <p className="font-paytone text-xl text-white">
-              Preciso de uma integracao!
-            </p>
-          </div>
+          <CardContato
+            nome="Preciso de uma integracao!"
+            noite="nao"
+          ></CardContato>
         </div>
       </section>
       <section className="flex flex-col items-center justify-end bgAzulAmarelo h-screen relative">
@@ -317,12 +278,8 @@ export default function Home() {
           alt="S"
           className="absolute"
         />
-        <div
-          className="w-72 h-16 grid place-items-center rounded-xl bg-cyan-200 mb-16 shadow-xl
-        hover:scale-110 transition transition-300 cursor-pointer z-20"
-        >
-          <p className="font-delius text-2xl">Comecar</p>
-        </div>
+
+        <CardContato nome="Comecar" noite="nao"></CardContato>
         <p className="font-dmSerif text-3xl text-black text-opacity-50 mb-4">
           Seja de <span className="text-cyan-700">manha</span> ou de{" "}
           <span className="text-yellow-600">noite</span>, estamos sempre aqui.
@@ -343,12 +300,7 @@ export default function Home() {
         <p className="font-dmSerif text-xl text-white">
           Satisfação total ou seu dinheiro de volta
         </p>
-        <div
-          className="w-72 h-16 grid place-items-center rounded-xl bg-orange-200 mt-12 shadowYellow
-        hover:scale-110 transition transition-300 cursor-pointer"
-        >
-          <p className="font-delius text-2xl ">Comecar</p>
-        </div>
+        <CardContato nome="Comecar" noite="sim"></CardContato>
         <div className="flex px-20 justify-between items-center pt-[500px] text-center text-white font-kumbh text-xl">
           <div className="grid grid-cols-1 place-items-center w-1/2 gap-10">
             <div className="flex items-center justify-center gap-10">
@@ -385,7 +337,7 @@ export default function Home() {
             </h2>
           </div>
         </div>
-        <h1 className="text-4xl font-delius pt-28 text-white">
+        <h1 className="text-4xl font-dmSerif pt-28 text-white">
           Entre em contato conosco:
         </h1>
         <div className="flex px-20 pt-20 gap-10 items-start w-full">
@@ -436,7 +388,7 @@ export default function Home() {
             </div>
             <div className="">
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
                 value={emailData.email}
@@ -499,7 +451,7 @@ export default function Home() {
               className="hover:scale-110 transition transition-300 cursor-pointer"
             />
           </div>
-          <div className="flex items-center gap-10 text-white font-delius">
+          <div className="flex items-center gap-10 text-white font-dmSerif">
             <p className="hover:scale-110 transition transition-300 cursor-pointer">
               Seguranca
             </p>
