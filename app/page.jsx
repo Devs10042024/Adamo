@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <main>
       <div className="bg-slate-100">
-        <header className="grid grid-cols-9 items-start px-24 py-3 font-livic relative bg-sky-400">
+        <header className="grid grid-cols-9 items-start px-24 py-3 font-livic  bg-sky-400 fixed z-50 w-full">
           <div className="col-span-3 flex items-center justify-start gap-8 h-full w-full">
             <h1 className="text-4xl font-gilda font-bold col-span-1">Adamo</h1>
             <CardContato nome="Contate-nos"></CardContato>
