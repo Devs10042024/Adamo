@@ -95,7 +95,7 @@ export default function Home() {
           </div>
         </header>
         <section className="flex flex-col items-center justify-start font-semibold">
-          <div className="flex flex-col items-center justify-start gap-10 pt-20 w-full">
+          <div className="flex flex-col items-center justify-start gap-10 pt-40 w-full">
             <h1 className="text-7xl text-center font-gilda w-3/4">
               A empresa número 1 em soluções empresariais
             </h1>
