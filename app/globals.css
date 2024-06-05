@@ -74,7 +74,25 @@
     border-radius: 4px;
   }
   /* aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
-
+  .bgSky {
+    background-color: #51c0ff;
+  }
+  .bgSvgsAzul1 {
+    background-image: url("./assets/CirculoDireita.svg");
+    background-size: cover;
+  }
+  .bgSvgsAzul2 {
+    background-image: url("./assets/CirculoEsquerda.svg");
+    background-size: cover;
+  }
+  .bgSvgsAzul3 {
+    background-image: url("./assets/svgAzulTop.svg");
+    background-size: cover;
+  }
+  .bgSvgsAzul4 {
+    background-image: url("./assets/svgAzulBottom.svg");
+    background-size: cover;
+  }
 }
 
 body {
