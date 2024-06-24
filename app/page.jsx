@@ -613,42 +613,67 @@ export default function Home() {
       </section>
       <section className="pt-40">
         <Image></Image>
-        <div>
-          <div>
-            <h1></h1>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div>
-            <h1></h1>
-            <form action=""></form>
-          </div>
-          <div>
-            <h1></h1>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
-        <div>
-          <div>
-            <div></div>
-            <p></p>
-          </div>
-          <div></div>
-          <div>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
-        <Image></Image>
       </section>
     </main>
   );
 }
+/*
+<form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-10 text-white w-5/6"
+          >
+            <div className="">
+              <textarea
+                id="message"
+                type="text"
+                name="message"
+                value={emailData.message}
+                onChange={handleChange}
+                className="w-full px-3 py-2 rounded-2xl bg-transparent border"
+                rows="6"
+                placeholder="Diga-nos o que esta buscando..."
+              />
+            </div>
+            <div className="">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={emailData.name}
+                onChange={handleChange}
+                className="w-full px-3 py-2 rounded-2xl bg-transparent border"
+                placeholder="Seu Nome"
+              />
+            </div>
+            <div className="">
+              <input
+                type="tel"
+                id="number"
+                name="phone"
+                value={emailData.phone}
+                onChange={handleChange}
+                className="w-full px-3 py-2 rounded-2xl bg-transparent border"
+                placeholder="Seu telefone"
+              />
+            </div>
+            <div className="">
+              <input
+                type="text"
+                id="email"
+                name="email"
+                value={emailData.email}
+                onChange={handleChange}
+                className="w-full px-3 py-2 rounded-2xl bg-transparent border"
+                placeholder="Seu Email"
+              />
+            </div>
+            <div className="grid place-items-center">
+              <button
+                type="submit"
+                className="bg-blue-500 hover:bg-blue-600 hover:scale-105 transition duration-200 w-72  text-white font-kodchasan py-2 px-4 rounded-2xl"
+              >
+                Enviar Mensagem
+              </button>
+            </div>
+          </form>
+          */
